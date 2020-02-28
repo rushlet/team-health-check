@@ -1,5 +1,5 @@
 {
-  "name": "VJ team health check",
+  "name": "VJ-team-health-check",
   "version": "1.0.0",
   "description": "Set up environment for project development - including webpack, sass and hbs",
   "main": "./src/index.js",

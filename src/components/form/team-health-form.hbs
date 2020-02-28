@@ -1,0 +1,18 @@
+<form id="form_unit-converter">
+    <div class="input-container__type">
+        <h3>Team health questionnaire</h3>
+        {{#each team_health_questions}}
+            <h4>{{title}}</h4>
+            <span class="example_good">👍 {{example_good}}</span>
+            <span class="example_bad">👎 {{example_bad}}</span>
+            <div class="btn-container">
+                <input type="radio" name="{{id}}-choice" id="input_{{id}}_green" value="green">
+                <label for="input_{{id}}_green" class="input_green">Green</label>
+                <input type="radio" name="{{id}}-choice" id="input_{{id}}_amber" value="amber">
+                <label for="input_{{id}}_amber" class="input_amber">Amber</label>
+                <input type="radio" name="{{id}}-choice" id="input_{{id}}_red" value="red">
+                <label for="input_{{id}}_red" class="input_red">Red</label>
+            </div>
+        {{/each}}
+    </div>
+</form>

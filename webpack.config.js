@@ -70,8 +70,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'index.hbs'),
             title: 'Team health check',
-            // templateParameters: require('./src/measures_swihack.json'),
-            // data: require('./src/measures_swihack.json')
+            templateParameters: require('./src/config.json'),
+            data: require('./src/config.json')
         }),
         new MiniCssExtractPlugin({
             filename: '[name].css',

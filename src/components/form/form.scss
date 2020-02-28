@@ -1,9 +1,20 @@
+$colours: ("green": #61c640, "amber": #febe00, "red": #cb001f);
+
 form {
     border: 2px solid $color2;
     max-width: $max-text-width;
     display: block;
     margin: 5rem auto;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
+
+    span {
+        display: block;
+        text-align: left;
+    }
+}
+
+.btn-container {
+    display: block;
 }
 
 .input-container__unit,
@@ -31,18 +42,20 @@ form {
         margin: 1rem 0.5rem;
     }
 
-    input[type="radio"]:checked+label {
-        background-color: $hover;
-        border-color: #febe00;
-    }
-
     input[type="radio"]:focus+label {
         border: 2px dashed $color2;
     }
 
-    label:hover {
-        background-color: $hover;
-        cursor: pointer;
+    @each $colour, $hex in $colours {
+        label.input_#{$colour}:hover {
+            background-color: $hex;
+            cursor: pointer;
+        }
+
+        input[type="radio"]:checked+label.input_#{$colour} {
+            background-color: $hex;
+            border-color: #febe00;
+        }
     }
 }
 
